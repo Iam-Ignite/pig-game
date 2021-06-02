@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
+}
+body{
+    font-family: sans-serif;
+    font-weight: 300;
+    position: relative;
+    color: #555;
+}
+.wrapper{
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        width: 100%;
+        position: relative;
+        padding: 10px;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        border-radius: 5px;
+    }
+}
+.player-0-panel,
+.player-1-panel{
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+@media only screen and (max-width: 600px) {
+
+    .player-0-panel,
+    .player-1-panel {
+        width: 50%;
+        float: left;
+        padding: 20px;
+        height: 100vh;
+    }
+}
+
+.player-name{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+@media only screen and (max-width: 600px) {
+    .player-name{
+        font-size: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 100;
+        margin-top: 60px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+}
+.player-score{
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #eb4d4d;
+    margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .player-score {
+        font-size: 50px;
+        font-weight: 10;
+        color: #eb4d4d;
+        margin-bottom: 120px;
+        margin-top: 60px;
+    }
+
+}
+.active {background-color: #f7f7f7;}
+.active .player-name{font-weight: 300;}
+
+.active .player-name::after{
+    content: "\2022";
+    font-size: 40px;
+    position: absolute;
+    color: #eb4d4d;
+    top: -15px;
+    right: -15px;
+}
+.player-current-box{
+    background-color: #eb4d4d;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .player-current-box {
+        background-color: #eb4d4d;
+        color: #fff;
+        width: 50%;
+        margin: 0 auto;
+        padding: 5px;
+        text-align: center;
+    }
+
+}
+
+.player-current-label{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+@media only screen and (max-width: 600px) {
+    .player-current-label {
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        font-size: 10px;
+    }
+
+}
+
+.player-current-score{
+    font-size: 30px;
+
+
+@media only screen and (max-width: 600px) {
+    .player-current-score {
+        font-size: 20px;
+    }
+}
+}
+button{
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    color: #555;
+    background: none;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}  
+button:hover{font-weight: 600;} 
+button:focus{
+    outline: none;
+}
+.btn-new{top: 45px;}
+.btn-roll{top: 403px;}
+.btn-hold{top: 467px;}
+
+@media only screen and (max-width: 600px) {
+    button {
+        width: 100px;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 16px;
+        font-weight: 100;
+    }
+
+    .btn-new {
+        top: 45px;
+    }
+
+    .btn-roll {
+        top: 420px;
+    }
+
+    .btn-hold {
+        top: 450px;
+    }
+}
+
+.dice{
+    position: absolute;
+    left: 55%;
+    top: 208px;
+    transform:translateX(-50%);
+    height: 80px;
+    box-shadow: 0px 10px 50px rgba(0,0,0,0.10);
+
+}
+.dices{
+    position: absolute;
+    left: 45%;
+    top: 208px;
+    transform:translateX(-50%);
+    height: 80px;
+    box-shadow: 0px 10px 50px rgba(0,0,0,0.10);
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .dice{
+        left: 60%;
+        top: 240px;
+        height: 55px;
+    
+    }
+    .dices{
+        left: 40%;
+        top: 240px;
+        height: 55px;
+    
+    }
+}
+
+.winning-socre{
+    position: absolute;
+    left: 50%;
+    top: 530px;
+    transform: translate(-50%);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    color: #eb4d4d;
+    border: 2px #eb4d4d solid ;
+    border-radius: 5px;
+    width: 120px;
+    padding: 5px;
+}
+@media only screen and (max-width: 600px) {
+    .winning-socre{
+        top: 480px;
+    }
+}
+  .winner{background-color: #f7f7f7;}
+  .winner .player-name{font-weight: 300; color: #eb4d4d;}
+  @media only screen and (max-width: 600px) {
+    .winner .player-name{font-weight: 100; color: #eb4d4d;}
+}
